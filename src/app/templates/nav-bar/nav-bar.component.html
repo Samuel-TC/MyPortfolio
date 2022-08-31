@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark " [@scrollAnimationNav]="state">
+  <ul class="navbar-nav mr-auto" [@scrollAnimationNav]="state">
+    <div class="title"> <a title style="color: rgb(3, 3, 53); text-decoration: none; "
+        [@scrollAnimationTex]="state">SAMUEL TINOCO CALDERON</a> </div>
+    <li class="btn nav-item"> <a [@scrollAnimationTex]="state" class="nav-link" style="color: rgb(3, 3, 53);"
+        href="#home" (click)="homeLink()">HOME</a> </li>
+    <li class="btn nav-item"> <a [@scrollAnimationTex]="state" class="nav-link" style="color: rgb(3, 3, 53);"
+        href="#about" (click)="aboutLink()">ABOUT</a> </li>
+    <li class="btn nav-item"> <a [@scrollAnimationTex]="state" class="nav-link" style="color: rgb(3, 3, 53);"
+        href="#education" (click)="educationLink()">EDUCATION</a> </li>
+    <li class="btn nav-item"> <a [@scrollAnimationTex]="state" class="nav-link" style="color: rgb(3, 3, 53);"
+        href="#skills" (click)="skillsLink()">SKILLS</a> </li>
+    <li class="btn nav-item"> <a [@scrollAnimationTex]="state" class="nav-link" style="color: rgb(3, 3, 53);"
+        href="#contact" (click)="contactLink()">CONTACT</a> </li>
+    <a (click)="clickbtn()" class="toggle-button">
+      <span [@scrollAnimationBar]="state" class="bar"></span>
+      <span [@scrollAnimationBar]="state" class="bar"></span>
+      <span [@scrollAnimationBar]="state" class="bar"></span>
+    </a>
+  </ul>
+</nav>

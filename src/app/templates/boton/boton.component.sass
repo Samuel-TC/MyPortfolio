@@ -1,0 +1,34 @@
+$color-text: #EAEBED
+
+*
+    margin: 0
+
+.botonF1
+    width: 65px
+    height: 65px
+    border-radius: 100%
+    background: $color-text
+    right: 0
+    bottom: 0
+    position: fixed
+    margin-right: 20px
+    margin-bottom: 16px
+    border: none
+    outline: none
+    color: #020000
+    font-size: 45px
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+    transition: .3s
+
+.botonF1
+    
+    &:hover 
+        transform: rotateY('angle')(360deg)
+        transform: scale(1.1)
+        transition: .2s
+        filter: drop-shadow(3px 3px 3px #6E5DCF) drop-shadow(-3px -3px 3px #6E5DCF)
+    &:active
+        transform: scale(1.4)
+
+a
+    text-decoration: none

@@ -1,0 +1,102 @@
+$bag-color: rgb(14, 0, 19)
+$fount-size-title-seccion: 2rem
+$text-color: #EAEBED
+
+.skills
+    text-align: center
+    color: $text-color
+    background-color: $bag-color
+    margin: 0
+    padding-bottom: 10rem
+
+.title-seccion
+    font-family: Arial
+    font-size: $fount-size-title-seccion
+    color: $text-color
+    padding: 1rem
+    padding-top: 2rem
+    padding-bottom: 2rem
+    filter: drop-shadow(2px 2px 2px #6E5DCF) drop-shadow(-2px -2px 2px #6E5DCF)
+
+.col-md-3
+    padding: 2vh
+    margin: 0
+    width: 21%
+
+h4
+    width: 100%
+    color: $text-color
+    position: absolute
+    bottom: 8px
+    font-size: 1.2rem
+
+.card
+    background-color: #8791ff1d
+    backdrop-filter: blur(1rem)
+    box-shadow: 6px
+    filter: drop-shadow(1px 1x 1px #6E5DCF) drop-shadow(-1px -1px 1px #6E5DCF)
+    border: none
+    display: block
+    margin: 0px auto
+    width: 150px
+    height: 150px
+    border-radius: 0px
+
+    &:hover
+        filter: drop-shadow(4px 4px 4px #6E5DCF) drop-shadow(-4px -4px 4px #6E5DCF)
+
+img
+    margin-top: 10%
+    width: 60%
+    padding: 10px
+
+@media  ( max-width: 900px )
+
+    .col-md-3
+        margin:1rem
+        margin-bottom: 1rem
+        margin-top: 1rem
+        padding: 0
+  
+       
+    .col-md-1
+        margin: 0rem
+    body
+        margin-top: 25%
+    .row
+        flex-direction: columns
+        align-items: flex-start
+    img
+        width: 50%
+
+@media  ( max-width: 600px )
+
+    .col-md-3
+        margin:  0rem
+        margin-bottom: 0rem
+        margin-top: 0rem
+         
+
+    .card
+        width: 100%
+        height: 0px
+        margin-top: 3rem
+        
+    
+    .col-md-1
+        margin: 0rem
+    body
+        margin-top: 25%
+    .row
+        flex-direction: columns
+        align-items: flex-start
+    img
+        width: 70%
+       
+    h4
+        display: none
+
+    .title-seccion
+        font-size: 2,5rem
+        margin-bottom: 1rem
+
