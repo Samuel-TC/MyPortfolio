@@ -13,7 +13,7 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
       })),
       state('normal', style({
        
-        backgroundColor: 'rgb(14, 0, 19)',
+        backgroundColor: '#010409',
         color:'white'
     
       })),
@@ -23,7 +23,7 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
     trigger('scrollAnimationTex',[
       state('scrolled', style({
         
-        color:'rgb(14, 0, 19)'
+        color:'#010409'
       })),
       state('normal', style({
        
@@ -37,7 +37,7 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
     trigger('scrollAnimationBar',[
       state('scrolled', style({
         
-        backgroundColor:'rgb(14, 0, 19)'
+        backgroundColor:'#010409'
       })),
       state('normal', style({
        

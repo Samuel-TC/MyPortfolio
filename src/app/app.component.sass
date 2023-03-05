@@ -1,12 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,400)
 $base: 0.5rem
-$text-color: #EAEBED
+$text-color: #FFFFFF
+
+
+$titulo-color: #010409
+$titulo-font-size: 1.8rem
+$titulo-font-weight: 700
+$titulo-line-height: 1.2
+$titulo-margin-bottom: 1rem
 
 *
   margin: 0
 
 .home-page
-  background-color: $text-color
+  background-color: #FFFFFF
 
 body
   position: relative
@@ -15,7 +22,7 @@ body
   align-items: center
   flex-direction: column
   min-height: 90vh
-  background-color: rgb(14, 0, 19)
+  background-color: #010409
   font-family: Roboto
   overflow: hidden
 
@@ -59,21 +66,15 @@ h1, h2
   line-height: 1.3
   text-align: center
 
-h1
-  font-size: 40px
-  margin-bottom: 0.5rem
-  font-weight: 700
-  margin-top: 2rem
+h1 
+  color: $titulo-color
+  font-size: $titulo-font-size
+  font-weight: $titulo-font-weight
+  line-height: $titulo-line-height
+  margin-bottom: $titulo-margin-bottom
 
   @media (min-width: 680px)
-    font-size: 2.1vw
-    margin-top: 0rem
-
-  @media (min-width: 900px)
-    font-size: 3.1vw
-
-  @media (min-width: 1200px)
-    font-size: 2.1vw
+    font-size: 3rem
 
 h2
   font-size: 18px
@@ -88,7 +89,7 @@ h2
     font-size: 1.1vw
 
 .arrow
-  background-color: rgb(14, 0, 19)
+  background-color: #010409
   display: flex
   justify-content: center
   align-items: center
@@ -137,15 +138,19 @@ img
   margin-top: 1.5rem
   box-shadow: 6px
   color: $text-color
-  filter: drop-shadow(2px 2px 2px #0d6efd) drop-shadow(-2px -2px 2px #0d6efd)
+  filter: drop-shadow(2px 2px 2px #6D8ED9) drop-shadow(-2px -2px 2px #6D8ED9)
+  border-color: #6D8ED9
   border-radius: 10rem
+  background-color: #6D8ED9
 
 .btn-secondary
     margin: 0.5rem
     margin-top: 1.5rem
     box-shadow: 6px
     color: $text-color
-    filter: drop-shadow(2px 2px 2px #5c636a) drop-shadow(-2px -2px 2px #5c636a)
+    filter: drop-shadow(2px 2px 2px #343957) drop-shadow(-2px -2px 2px #343957)
+    background-color: #343957
+    border-color: #343957 
     border-radius: 10rem
 
 .chevron
@@ -197,13 +202,13 @@ article
     transform: translateY($base * 8) scale(0.5)
 
 .btn-download
-  transition: 0.5s
+  transition: 0.25s
   &:hover
     text-decoration: wavy
-    box-shadow: 4px 4px #0d6efd
+    box-shadow: 4px 4px #343957
 
 .btn-contact
-  transition: 0.5s
+  transition: 0.25s
   &:hover
     text-decoration: wavy
-    box-shadow: 4px 4px #6c757d
+    box-shadow: 4px 4px #161B22

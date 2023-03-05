@@ -1,4 +1,4 @@
-$bag-color: rgb(14, 0, 19)
+$bag-color: #010409
 $fount-size-title-seccion: 2rem
 $text-color: #EAEBED
 
@@ -16,7 +16,6 @@ $text-color: #EAEBED
     padding: 1rem
     padding-top: 2rem
     padding-bottom: 0rem
-    filter: drop-shadow(2px 2px 2px #6E5DCF) drop-shadow(-2px -2px 2px #6E5DCF)
 
 .col-md-12
     padding: 2vh
@@ -79,53 +78,20 @@ $text-color: #EAEBED
         width: 100%
         height: 250
         margin: 0 auto
-        background: #8791ff1d
+        background: #161b2277
         padding: 20px
         box-sizing: border-box
         text-align: center
         box-shadow: 0 10px 30px rgba(0,0,0,.5)
         border-radius: 0px
-        transition: 0.5s
+        transition: 0.25s
+        &:hover
+            filter: drop-shadow(4px 4px 4px #010409) drop-shadow(-4px -4px 4px #6d8dd96f)
 
-    & .card .layer
-        z-index: 1
-        position: absolute
-        top: calc(100% - 2px)
-        height: 100%
-        width: 100%
-        left: 0
-        background: linear-gradient(to left , #0d6efd, blue,#0d6efd)
-        transition: 0.5s
-        &:before,
-        &:after
-            content: ""
-            position: absolute
-            left: 50%
-            min-width: 400vw
-            min-height: 405vw
-            background-color: #23002880
-            animation-name: rotate
-            animation-iteration-count: infinite
-            animation-timing-function: linear
-
-        &:before
-            bottom: 12vh
-            border-radius: 45%
-            animation-duration: 15s
-
-        &:after
-            bottom: 10vh
-            opacity: .5
-            border-radius: 47%
-            animation-duration: 22s
 
     & .card .content
         z-index: 2
         position: relative
-
-    & .card:hover
-        top: 0
-        filter: drop-shadow(2px 2px 2px #6E5DCF) drop-shadow(-2px -2px 2px #6E5DCF)
 
     & .card .content p
         font-size: 14px
