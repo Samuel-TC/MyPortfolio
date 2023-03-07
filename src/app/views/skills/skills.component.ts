@@ -49,11 +49,13 @@ export class SkillsComponent {
     const navbarLink3 = document.getElementsByClassName('nav-link')[2]
     const navbarLink4 = document.getElementsByClassName('nav-link')[3]
     const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5]
 
     navbarLink.classList.remove('active')
     navbarLink2.classList.remove('active')
     navbarLink3.classList.remove('active')
     navbarLink5.classList.remove('active')
+    navbarLink6.classList.remove('active');
     if(!navbarLink4.classList.toggle('active')){
       navbarLink4.classList.toggle('active')
     }

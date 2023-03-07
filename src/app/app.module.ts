@@ -10,7 +10,8 @@ import { AboutComponent } from './views/about/about.component';
 import { EducationComponent } from './views/education/education.component';
 import { ContactComponent } from './views/contact/contact.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BotonComponent } from './templates/boton/boton.component'
+import { BotonComponent } from './templates/boton/boton.component';
+import { ProjectComponent } from './views/project/project.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BotonComponent } from './templates/boton/boton.component'
     AboutComponent,
     EducationComponent,
     ContactComponent,
-    BotonComponent
+    BotonComponent,
+    ProjectComponent
     
   ],
   imports: [

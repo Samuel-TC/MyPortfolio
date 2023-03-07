@@ -76,18 +76,20 @@ export class NavBarComponent implements OnInit {
     }
 
   clickbtn(){
-    const toggleButton = document.getElementsByClassName('toggle-button')[0]
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const toggleButton = document.getElementsByClassName('toggle-button')[0];
+    const navbarLink = document.getElementsByClassName('nav-link')[0];
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2];
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3];
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4];
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
 
-    navbarLink.classList.toggle('active')
-    navbarLink2.classList.toggle('active')
-    navbarLink3.classList.toggle('active')
-    navbarLink4.classList.toggle('active')
-    navbarLink5.classList.toggle('active')
+    navbarLink.classList.toggle('active');
+    navbarLink2.classList.toggle('active');
+    navbarLink3.classList.toggle('active');
+    navbarLink4.classList.toggle('active');
+    navbarLink5.classList.toggle('active');
+    navbarLink6.classList.toggle('active');
  
   }
 
@@ -98,29 +100,34 @@ export class NavBarComponent implements OnInit {
     const navbarLink3 = document.getElementsByClassName('nav-link')[2]
     const navbarLink4 = document.getElementsByClassName('nav-link')[3]
     const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
 
     navbarLink.classList.remove('active')
     navbarLink2.classList.remove('active')
     navbarLink3.classList.remove('active')
     navbarLink4.classList.remove('active')
-    if(!navbarLink5.classList.toggle('active')){
-      navbarLink5.classList.toggle('active')
+    navbarLink5.classList.remove('active');
+    
+    if(!navbarLink6.classList.toggle('active')){
+      navbarLink6.classList.toggle('active')
     }
  
   }
 
   educationLink(){
 
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink = document.getElementsByClassName('nav-link')[0];
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2];
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3];
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4];
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
 
-    navbarLink.classList.remove('active')
-    navbarLink2.classList.remove('active')
-    navbarLink4.classList.remove('active')
-    navbarLink5.classList.remove('active')
+    navbarLink.classList.remove('active');
+    navbarLink2.classList.remove('active');
+    navbarLink4.classList.remove('active');
+    navbarLink5.classList.remove('active');
+    navbarLink6.classList.remove('active');
     if(!navbarLink3.classList.toggle('active')){
       navbarLink3.classList.toggle('active')
     }
@@ -129,54 +136,80 @@ export class NavBarComponent implements OnInit {
 
   skillsLink(){
 
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink = document.getElementsByClassName('nav-link')[0];
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2];
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3];
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4];
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
 
     navbarLink.classList.remove('active')
     navbarLink2.classList.remove('active')
     navbarLink3.classList.remove('active')
     navbarLink5.classList.remove('active')
+    navbarLink6.classList.remove('active');
     if(!navbarLink4.classList.toggle('active')){
       navbarLink4.classList.toggle('active')
     }
  
   }
 
+  projectLink(){
+
+    const navbarLink = document.getElementsByClassName('nav-link')[0];
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2];
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3];
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4];
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
+
+    navbarLink.classList.remove('active');
+    navbarLink2.classList.remove('active');
+    navbarLink3.classList.remove('active');
+    navbarLink4.classList.remove('active');
+    navbarLink6.classList.remove('active')
+    if(!navbarLink5.classList.toggle('active')){
+      navbarLink5.classList.toggle('active')
+    }
+ 
+  }
+
   aboutLink(){
 
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink = document.getElementsByClassName('nav-link')[0];
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2];
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3];
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4];
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
 
-    navbarLink.classList.remove('active')
-    navbarLink3.classList.remove('active')
-    navbarLink4.classList.remove('active')
-    navbarLink5.classList.remove('active')
+    navbarLink.classList.remove('active');
+    navbarLink3.classList.remove('active');
+    navbarLink4.classList.remove('active');
+    navbarLink5.classList.remove('active');
+    navbarLink6.classList.remove('active');
     if(!navbarLink2.classList.toggle('active')){
-      navbarLink2.classList.toggle('active')
+      navbarLink2.classList.toggle('active');
     }
  
   }
 
   homeLink(){
 
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink = document.getElementsByClassName('nav-link')[0];
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2];
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3];
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4];
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5];
 
-    navbarLink2.classList.remove('active')
-    navbarLink3.classList.remove('active')
-    navbarLink4.classList.remove('active')
-    navbarLink5.classList.remove('active')
+    navbarLink2.classList.remove('active');
+    navbarLink3.classList.remove('active');
+    navbarLink4.classList.remove('active');
+    navbarLink5.classList.remove('active');
+    navbarLink6.classList.remove('active');
     if(!navbarLink.classList.toggle('active')){
-      navbarLink.classList.toggle('active')
+      navbarLink.classList.toggle('active');
     }
  
   }
