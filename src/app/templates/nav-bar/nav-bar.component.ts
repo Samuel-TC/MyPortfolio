@@ -90,7 +90,7 @@ export class NavBarComponent implements OnInit {
     navbarLink4.classList.toggle('active');
     navbarLink5.classList.toggle('active');
     navbarLink6.classList.toggle('active');
- 
+
   }
 
   contactLink(){
