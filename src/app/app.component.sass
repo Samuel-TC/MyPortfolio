@@ -10,10 +10,17 @@ $titulo-line-height: 1.2
 $titulo-margin-bottom: 0.5rem
 
 *
+  -webkit-user-select: none /* Para navegadores basados en WebKit, como Chrome y Safari */
+  -moz-user-select: none /* Para navegadores basados en Gecko, como Firefox */
+  -ms-user-select: none /* Para navegadores basados en Edge */
+  user-select: none /* Establece la propiedad user-select para todos los navegadores */
+
+*
   margin: 0
 
 .home-page
   background-color: #FFFFFF
+
 
 body
   position: relative
@@ -21,7 +28,7 @@ body
   justify-content: center
   align-items: center
   flex-direction: column
-  min-height: 90vh
+  min-height: 97vh
   background-color: #010409
   font-family: Roboto
   overflow: hidden
@@ -109,18 +116,21 @@ img
   z-index: 100
 
 .img-contact
-    width: 40px
-    max-width: 40px
+    width: 45px
+    max-width: 45px
     margin: 1rem
     margin-left: 10rem
+    margin-bottom: 2rem
     z-index: 200
     &:hover
-      filter: drop-shadow(2px 2px 2px #6E5DCF) drop-shadow(-2px -2px 2px #6E5DCF)
+      filter: drop-shadow(4px 4px 4px #010409) drop-shadow(-4px -4px 4px #6d8dd96f)
+      cursor: pointer
       
     @media (max-width: 680px)
       margin: 0.5rem
       margin-right: 3.5rem
       margin-top: 5rem
+      width: 40px
       
 
 .col-md-2
@@ -172,11 +182,11 @@ img
   margin-left: 2rem
 
 .btn-primary
+  font-size: 1.3rem
   margin: 0.5rem
-  margin-top: 1.5rem
   box-shadow: 6px
   color: $text-color
-  filter: drop-shadow(4px 4px 4px #6D8ED9) drop-shadow(-4px -4px 2px #6D8ED9)
+  filter: drop-shadow(5px 5px 5px #6d8dd9eb) drop-shadow(-2px -2px 2px #6D8ED9)
   border-color: #6D8ED9
   border-radius: 10rem
   background-color: #6D8ED9
@@ -235,10 +245,5 @@ article
   transition: 0.25s
   &:hover
     text-decoration: wavy
-    box-shadow: 4px 4px #343957
+    filter: drop-shadow(4px 4px 4px #010409) drop-shadow(-4px -4px 4px #6d8dd96f)
 
-.btn-contact
-  transition: 0.25s
-  &:hover
-    text-decoration: wavy
-    box-shadow: 4px 4px #161B22
