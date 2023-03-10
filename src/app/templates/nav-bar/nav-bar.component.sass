@@ -12,11 +12,12 @@ $color-text: #EAEBED
     width: 100%
     height: 80px
     background-color: #ffffffde
-    backdrop-filter: blur(2px)
     text-align: center
     border-radius: 0px 0 2px 2px
     margin-bottom: 0
     z-index: 400
+    @media  ( max-width: 680px )
+        height: 30px
 
 
 .nav-link
@@ -133,7 +134,7 @@ body
     .nav-link a li .nav-item
         padding: .1rem 0.1rem
         margin-bottom: 0rem
-        margin-top: 0rem
+        margin-top: 1rem
     
     .nav-link.active
         display: flex
@@ -161,4 +162,9 @@ body
         border-color: #69778f00
     @media  ( max-width: 900px )
         border-color: #69778f00
-      
+
+.title
+    @media  ( max-width: 680px )
+        display: none
+
+
