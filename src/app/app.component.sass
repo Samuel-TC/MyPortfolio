@@ -25,6 +25,9 @@ body
   background-color: #010409
   font-family: Roboto
   overflow: hidden
+  @media (max-width: 680px)
+      min-height: 110vh
+
 
   &:before,
   &:after
@@ -68,7 +71,7 @@ h1, h2
 
 h1 
   color: $titulo-color
-  font-size: 3rem
+  font-size: 2.8rem
   font-weight: $titulo-font-weight
   line-height: $titulo-line-height
   margin-bottom: $titulo-margin-bottom
@@ -86,6 +89,8 @@ h1
 
 h2
   font-size: 1.32rem
+  @media (max-width: 680px)
+    text-align: center
 
 .arrow
   background-color: #010409
@@ -114,6 +119,7 @@ img
       
     @media (max-width: 680px)
       margin: 0.5rem
+      
 
 .col-md-2
   display: flex
@@ -168,10 +174,14 @@ img
   margin-top: 1.5rem
   box-shadow: 6px
   color: $text-color
-  filter: drop-shadow(4px 4px 4px #6E5DCF) drop-shadow(-2px -2px 2px #6E5DCF)
-  border-color: #6E5DCF
+  filter: drop-shadow(4px 4px 4px #6D8ED9) drop-shadow(-4px -4px 2px #6D8ED9)
+  border-color: #6D8ED9
   border-radius: 10rem
-  background-color: #6E5DCF
+  background-color: #6D8ED9
+  @media (max-width: 680px)
+    margin-top: 5rem
+
+
 
 .chevron
   position: absolute
@@ -194,7 +204,7 @@ img
   top: 0
   height: 100%
   width: 50%
-  background-color: #6E5DCF
+  background-color: white
 
 .chevron:before
   left: 0
