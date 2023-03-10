@@ -113,23 +113,29 @@ img
   width: 70%
   z-index: 100
 
-.img-contact
-    width: 45px
-    max-width: 45px
+a .img-contact
+    background-color: white
+    width: 40px
+    max-width: 40px
     margin: 1rem
     margin-left: 10rem
     margin-bottom: 2rem
     z-index: 200
-    &:hover
-      filter: drop-shadow(4px 4px 4px #010409) drop-shadow(-4px -4px 4px #6d8dd96f)
-      cursor: pointer
+    transition: 0.25s
       
+
     @media (max-width: 680px)
       margin: 0.5rem
       margin-left: 1.7rem
       margin-right: 1.7rem
       margin-top: 3rem
       width: 40px
+
+    &:hover
+        cursor: pointer
+        fill: #6D8ED9 !important
+        transform: scale(1.1)
+        transition: 0.25s
       
 
 .col-md-2
@@ -183,7 +189,7 @@ img
 .btn-primary
   font-size: 1.3rem
   margin: 0.5rem
-  margin-top: 1rem
+  margin-top: 2rem
   box-shadow: 6px
   color: $text-color
   filter: drop-shadow(5px 5px 5px #6d8dd9eb) drop-shadow(-2px -2px 2px #6D8ED9)
@@ -220,7 +226,7 @@ img
   top: 0
   height: 100%
   width: 50%
-  background-color: #6D8ED9
+  background-color: #010409
 
 .chevron:before
   left: 0
@@ -251,5 +257,6 @@ article
   transition: 0.25s
   &:hover
     text-decoration: wavy
-    filter: drop-shadow(4px 4px 4px #010409) drop-shadow(-4px -4px 4px #6d8dd96f)
+    background-color: #4d76d6bd
+    filter: drop-shadow(4px 4px 4px #6d8dd9a9) drop-shadow(-4px -4px 4p#6d8dd99cD9)
 
