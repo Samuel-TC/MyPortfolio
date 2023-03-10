@@ -3,22 +3,25 @@
 <body >
     <div class="container" >
 
-        <div class="row justify-content-center" @enterState>
+        <div class="row " @enterState>
            
             <div class="col-md-4">
-                <img src="../assets/profile.png" alt="">
+                <img src="../assets/profile.png" alt="samuel Tinoco Calderón"> 
             </div>
 
             <div class="col-md-5">
-                <h1 >SAMUEL TINOCO</h1>
-                <h2>I am a  <span style="color: #6D8ED9; font-weight: 550;">full stack </span>developer with knowledge in angular, spring boot and sql server
+                <h1 class="second-title">Hy! I Am </h1>
+                <h1 >Samuel Tinoco</h1>
+                <h2> <span style="color: #6D8ED9; font-weight: 550;">Full Stack </span>developer with knowledge in angular, spring boot and sql server
                 </h2>
-                <a href="#contact">
-                    <input type="button"  class="btn-contact btn btn-secondary " value="CONTACT ME">
-                </a>
+
                 <input type="button" (click)="dowland()" class="btn-download btn btn-primary" value="DOWNLOAD CV">
             </div>
-          
+            <div class="col-md-2">
+                <img class="img-contact" src="../assets/linkedin-title.svg" alt="linkedin">
+                <img class="img-contact" src="../assets/instagram-title.svg" alt="instagram">
+                <img class="img-contact" src="../assets/github-title.svg" alt="github">
+            </div>
         </div>
     </div>
 
