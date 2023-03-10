@@ -64,7 +64,7 @@ export class NavBarComponent implements OnInit {
     checkScroll() {
       const componentPosition = this.el.nativeElement.offsetTop
       const scrollPosition = window.pageYOffset
-      console.log(scrollPosition)
+     
       if (scrollPosition <= componentPosition) {
        
         this.state = 'scrolled'
