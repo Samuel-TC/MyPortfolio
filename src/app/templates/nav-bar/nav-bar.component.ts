@@ -17,8 +17,8 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
         color:'white'
     
       })),
-      transition('scrolled => normal', animate('500ms ease-out')),
-      transition('normal => scrolled', animate('500ms ease-in'))
+      transition('scrolled => normal', animate('300ms ease-out')),
+      transition('normal => scrolled', animate('300ms ease-in'))
     ]),
     trigger('scrollAnimationTex',[
       state('scrolled', style({
@@ -31,8 +31,8 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
    
     
       })),
-      transition('scrolled => normal', animate('500ms ease-out')),
-      transition('normal => scrolled', animate('500ms ease-in'))
+      transition('scrolled => normal', animate('300ms ease-out')),
+      transition('normal => scrolled', animate('300ms ease-in'))
     ]),
     trigger('scrollAnimationBar',[
       state('scrolled', style({
@@ -44,8 +44,8 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
         backgroundColor:'#EAEBED',
     
       })),
-      transition('scrolled => normal', animate('500ms ease-out')),
-      transition('normal => scrolled', animate('500ms ease-in'))
+      transition('scrolled => normal', animate('300ms ease-out')),
+      transition('normal => scrolled', animate('300ms ease-in'))
     ])
   ]
 })
