@@ -1,67 +1,69 @@
-import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { trigger,style,transition,animate, state } from '@angular/animations'
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.sass'],
   animations: [
-    trigger('scrollAnimationAbout', [
-      state('initial', style({
-        transform: 'translateX(100%)',
-        opacity: 0
-      })),
+    trigger('scrollAnimationAbout',[
       state('scrolled', style({
-        transform: 'translateX(100%)',
-        opacity: 0
+        transform: 'translateX(-100%)',
+        opacity:0 
       })),
       state('normal', style({
         transform: 'translateX(0)',
-        opacity: 1
+        opacity:1 
       })),
-      transition('initial => normal', animate('1000ms ease-out')),
-      transition('normal => scrolled', animate('1000ms ease-in')),
-      transition('void => initial', [
-        style({ transform: 'translateX(-100%)', opacity: 0 }),
-        animate('1000ms ease-out')
-      ]),
-      transition('initial => normal, scrolled => normal', [
-        style({ transform: 'translateX(-100%)', opacity: 0 }),
-        animate('1000ms ease-out')
-      ])
+      transition('scrolled => normal', animate('1000ms ease-out')),
+      transition('normal => scrolled', animate('1000ms ease-in'))
     ])
   ]
 })
 export class AboutComponent implements OnInit {
 
-  state = 'initial'
+  state = 'normal'
 
   constructor(public el: ElementRef) { }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
-    const componentPosition = this.el.nativeElement.offsetTop
-    const scrollPosition = window.pageYOffset
-    if (scrollPosition <= componentPosition - 800) {
-      this.state = 'scrolled'
-    } else {
-      this.state = 'normal'
-      this.inAbout()
+      const componentPosition = this.el.nativeElement.offsetTop
+      const scrollPosition = window.pageYOffset
+      console.log(scrollPosition)
+      if (scrollPosition <= componentPosition-800) {
+       
+        this.state = 'scrolled'
+      } else {
+        
+        this.state = 'normal'
+        this.inAbout()
+      }
+  }
+
+  inAbout(){
+    const navbarLink = document.getElementsByClassName('nav-link')[0]
+    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
+    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
+    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
+    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
+    const navbarLink6 = document.getElementsByClassName('nav-link')[5]
+
+    navbarLink.classList.remove('active')
+    navbarLink3.classList.remove('active')
+    navbarLink4.classList.remove('active')
+    navbarLink5.classList.remove('active')
+    navbarLink6.classList.remove('active');
+
+    if(!navbarLink2.classList.toggle('active')){
+      navbarLink2.classList.toggle('active')
     }
   }
 
-  inAbout() {
-    const navbarLinks = document.getElementsByClassName('nav-link');
-    Array.from(navbarLinks).forEach((link) => {
-      link.classList.remove('active');
-    });
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1];
-    navbarLink2.classList.add('active');
-  }
+  
 
   ngOnInit(): void {
-    this.state = 'initial';
-    document.body.style.overflowX = 'hidden'; // agregamos la propiedad overflow-x: hidden
+    this.state = 'normal'
   }
 
 }
