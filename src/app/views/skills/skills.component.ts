@@ -6,17 +6,29 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.sass'],
   animations: [
-    trigger('scrollAnimation',[
+    trigger('scrollAnimation', [
+      state('initial', style({
+        transform: 'translateX(100%)',
+        opacity: 0
+      })),
       state('scrolled', style({
-        transform: 'translateX(-100%)',
-        opacity:0 
+        transform: 'translateX(100%)',
+        opacity: 0
       })),
       state('normal', style({
         transform: 'translateX(0)',
-        opacity:1
+        opacity: 1
       })),
-      transition('scrolled => normal', animate('1000ms ease-out')),
-      transition('normal => scrolled', animate('1000ms ease-in'))
+      transition('initial => normal', animate('1000ms ease-out')),
+      transition('normal => scrolled', animate('1000ms ease-in')),
+      transition('void => initial', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }),
+        animate('1000ms ease-out')
+      ]),
+      transition('initial => normal, scrolled => normal', [
+        style({ transform: 'translateX(-100%)', opacity: 0 }),
+        animate('1000ms ease-out')
+      ])
     ])
   ]
 })
@@ -30,7 +42,7 @@ export class SkillsComponent {
     checkScroll() {
       const componentPosition = this.el.nativeElement.offsetTop
       const scrollPosition = window.pageYOffset
-      console.log(scrollPosition)
+      
       if (scrollPosition <= componentPosition-700) {
        
         this.state = 'scrolled'
@@ -44,21 +56,10 @@ export class SkillsComponent {
 
   inSkill(){
 
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
-    const navbarLink6 = document.getElementsByClassName('nav-link')[5]
-
-    navbarLink.classList.remove('active')
-    navbarLink2.classList.remove('active')
-    navbarLink3.classList.remove('active')
-    navbarLink5.classList.remove('active')
-    navbarLink6.classList.remove('active');
-    if(!navbarLink4.classList.toggle('active')){
-      navbarLink4.classList.toggle('active')
+    const navbarLinks = document.getElementsByClassName('nav-link');
+    for (let i = 0; i < navbarLinks.length; i++) {
+      navbarLinks[i].classList.remove('active');
     }
- 
+    navbarLinks[3].classList.add('active');
   }
 }

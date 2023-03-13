@@ -9,12 +9,12 @@ import { trigger,style,transition,animate, state } from '@angular/animations'
     trigger('enterState',[
       state('void',style({
         transform: 'translateX(-100%)',
-        opacity:0 
+        opacity: 0 
       })),
       transition(':enter',[
-        animate(1000,style({
+        animate('1s cubic-bezier(0.4, 0, 0.2, 1)',style({
           transform: 'translateX(0)',
-          opacity:1 
+          opacity: 1 
         }))
       ])
     ])
