@@ -43,19 +43,10 @@ export class AppComponent implements OnInit {
   }
 
   inHome(){
-    const navbarLink = document.getElementsByClassName('nav-link')[0]
-    const navbarLink2 = document.getElementsByClassName('nav-link')[1]
-    const navbarLink3 = document.getElementsByClassName('nav-link')[2]
-    const navbarLink4 = document.getElementsByClassName('nav-link')[3]
-    const navbarLink5 = document.getElementsByClassName('nav-link')[4]
-
-    navbarLink2.classList.remove('active')
-    navbarLink3.classList.remove('active')
-    navbarLink4.classList.remove('active')
-    navbarLink5.classList.remove('active')
-    if(!navbarLink.classList.toggle('active')){
-      navbarLink.classList.toggle('active')
-    }
+    const navbarLinks = Array.from(document.getElementsByClassName('nav-link'));
+  
+    navbarLinks.forEach(link => link.classList.remove('active'));
+    navbarLinks[0].classList.add('active');
   }
 
   ngOnInit(): void {}
